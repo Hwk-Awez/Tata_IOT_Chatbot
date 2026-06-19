@@ -18,10 +18,15 @@ Here are the relevant table schemas:
 
 Important rules:
 - Only write SELECT queries, never modify the database
+- The table named 'user' must always be quoted: SELECT * FROM "user"
 - Use exact table names as shown in the schemas
+- period_start and period_end are stored as TEXT, cast them when using time functions: period_start::TIME or period_start::TIMESTAMP
 - To join deviation with machine names: deviation.hardware_id = machines.hardware_id
 - To join periodic_data_interval2 with machine names: periodic_data_interval2.hardware_id = machines.hardware_id
+- business_date is stored as TEXT, always cast when filtering by date or year: business_date::DATE or EXTRACT(YEAR FROM business_date::DATE)
 - Limit results to 50 rows
+- The 'deleted' column is stored as TEXT not boolean, filter like this: WHERE deleted = 'f' or WHERE deleted = 'false'
+- Only use columns that exist in the provided schema. Never add columns like 'deleted', 'active_status' unless they appear in the schema context.
 - Return ONLY the SQL query, nothing else
 
 User question: {user_query}
