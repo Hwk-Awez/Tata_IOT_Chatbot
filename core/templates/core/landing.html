@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+
+    <style>
+        body{
+            margin:0;
+            background:#0d1117;
+            color:#58a6ff;
+            font-family:Segoe UI, sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            text-align:center;
+            padding:40px;
+            border:1px solid #30363d;
+            border-radius:20px;
+            background:#161b22;
+            box-shadow:0 0 30px rgba(88,166,255,.3);
+        }
+
+        h1{
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#8b949e;
+        }
+
+        .author{
+            margin-top:30px;
+            color:#6e7681;
+            font-size:.9rem;
+        }
+
+        .loader{
+            width:50px;
+            height:50px;
+            margin:25px auto;
+            border:5px solid #30363d;
+            border-top:5px solid #58a6ff;
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        }
+
+        @keyframes spin{
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tata IoT Chatbot</h1>
+    <p>Initializing AI Engine...</p>
+
+    <div class="loader"></div>
+
+    <div class="author">
+        Made by <strong>Mohammad Awez Haider</strong>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "/api";
+    }, 3000);
+</script>
+
+</body>
+</html>
