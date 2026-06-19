@@ -1,5 +1,4 @@
 # Tata_IOT_Chatbot
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Hwk-Awez/Tata_IOT_Chatbot)
 
 This repository contains "SteelBot," a conversational AI chatbot designed to query and analyze industrial IoT data from Tata Steel's machinery. Users can ask questions in plain English about machine performance, deviations, material consumption, and shift analytics, and the chatbot will generate and execute SQL queries to provide a natural language response.
 
